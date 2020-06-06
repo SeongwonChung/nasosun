@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Product, Result, Offer, Requirement, User, Review
 from .crawl import GetProductInfo
 from django.contrib import auth
+
 # Create your views here.
 
 
@@ -112,3 +113,6 @@ def main(request):
 
 def membership_suggestion(request):
     return render(request, 'membership_suggestion.html')
+
+
+
