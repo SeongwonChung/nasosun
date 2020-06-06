@@ -111,6 +111,7 @@ def result(request, result_pk):
     gender = requirement.gender
     budget = requirement.budget
 
+
     cnt = 0
     while cnt < 3:
         product = GetProductInfo(age, gender, budget)
