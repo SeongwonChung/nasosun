@@ -8,7 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="for_you_container">
+    <div id = "loader">
+        <div  id = "loaderImg" class="lds-heart"><div></div></div>
+        <p class="loaderMessage">전문 퍼스널 쇼퍼가 취향에 딱 맞는 선물을 추천하고 있습니다!</p>
+    </div>
+    <div id="for_you_container" class="for_you_container">
     <div class="for_you_title">선물 받으실 분의 정보를<br>입력해주세요.</div>
     <div class="for_you_sub_title">자기자신을 위한 선물도 좋아요:)</div>
     <form method="POST">
@@ -64,12 +68,7 @@
                 <label class="box_slider_text">감성<br>주의</label>
             </div>
         </div>
-<!-- 
-        <div>취향<br>
-            <label>실용주의</label>
-            <input type="range" min="1" max="100"  name="temperment">
-            <label>감성주의</label>
-        </div>  -->
+
         <div class="box">
             <div class="box_title">목적</div>
         <br>
@@ -92,10 +91,23 @@
             <input class="box_budget" type="number" name="budget" placeholder="계획하신 예산을 입력해주세요">         
         </div>
         <div class="for_you_submit_container">
-        <button class="for_you_submit" type="submit">선물 추천 받기</button>   
+        <button id = "for_you_submit" class="for_you_submit" type="submit">선물 추천 받기</button>   
         </div>          
     </form>
     </div>
+
+    <script type="text/javascript">
+        document.getElementById("loader").style.display = "none";
+
+        window.onload = function() {
+            document.getElementById("for_you_submit").onclick = function() {
+                document.getElementById("for_you_container").style.display = "none";                
+                document.getElementById("loader").style.display = "flex";
+
+            };
+        };
+      
+    </script>
     {% endblock content %}
 </body>
 

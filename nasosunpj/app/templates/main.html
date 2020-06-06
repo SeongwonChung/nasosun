@@ -22,17 +22,59 @@
         {% endif %}
     </div>
       
-    <div class="content_outline">
+    <div class="content_container">
         <div class="content">
-            <img class="nasosun" src="../static/img/그룹 18@3x.png"  alt="나소선">
-            <img class="drawing" src="../static/img/dddddgtr325@3x.png"  alt="드로잉">
+            <img class="nasosun" src="{% static 'img/그룹 18@3x.png' %}"  alt="나소선">
+            <img class="drawing" src="{% static 'img/dddddgtr325@3x.png' %}"  alt="드로잉">
 
             <p class="question">"어떤 선물을 줘야할까?"</p>
             <div class="span_box">
-                <p class="start_ment">선물을 주고 싶은 사람은 많죠. 하지만 내 진심을 담을 선물을 찾을 시간은 부족하기 일쑤 또, 받는 사람의 취향에 맞는 선물을 고르긴 참 쉽지않죠.</p>
+                <p class="start_ment">선물을 주고 싶은 사람은 많죠.<br>하지만 내 진심을 담을 선물을 찾을 시간은 부족하기 일쑤<br> 또, 받는 사람의 취향에 맞는 선물을 고르긴 참 쉽지않죠.</p>
             </div>
-            <img class="gift_box" src="../static/img/그룹 19@3x.png"  alt="상자뚜껑">
-            <a class=go_for_you href="{% url 'for_you' %}">선물 추천 받기</a>
+            <img class="gift_box" src="{% static 'img/그룹 19@3x.png' %}"  alt="상자뚜껑">
+            <p class="solution"> 그래서 <br> 나소선이 <br> 준비했습니다</p>
+            <p class="info">"1:1 맞춤 선물 추천 서비스"</p>
+            
+            
+            <div class="icon">
+                <div class="box">
+                    <div class="circle_01">
+                        <img class="icon_01" src="{% static 'img/KakaoTalk_20200606_130720522_01@3x.png' %}"  alt="취향저격">
+                    </div>
+                    <div class="one">
+                        <p class="num">#1</p>
+                        <p class="word">취향저격</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="circle_01">
+                        <img class="icon_01" src="{% static 'img/KakaoTalk_20200606_130720522_02@3x.png' %}"  alt="시간절약">
+                    </div>
+                    <div class="one">
+                        <p class="num">#2</p>
+                        <p class="word">시간절약</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="circle_01">
+                        <img class="icon_01" src="{% static 'img/KakaoTalk_20200606_130720522@3x.png' %}"  alt="꿀 정보">
+                    </div>
+                    <div class="one">
+                        <p class="num">#3</p>
+                        <p class="word">꿀 정보</p>
+                    </div>
+                </div>
+            </div>
+
+               
+                <p class="last">선물할 사람에 대한 간단한 정보만 입력하면<br>'나소선 에디터'가 취향에 딱! 맞는 선물을 추천해드릴게요</p>
+            <div class="go_for_you_container">
+                {% if user.is_authenticated %}
+                <a class=go_for_you href="{% url 'for_you' %}">선물 추천 받기</a>
+                {% else %}
+                <a class=go_for_you href="{% url 'suggestion' %}">선물 추천 받기</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 
