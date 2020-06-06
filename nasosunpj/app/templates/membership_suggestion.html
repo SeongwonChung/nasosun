@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'membership_suggestion.css'%}">
-    <title>Document</title>
-</head>
-<body>
     <div class="suggestion">
-        <div class="suggestion">
-            <h2>회원가입</h2>
+        <div class="category">
+            <h1>앗,</h1>
+            <h1><span>나소선</span>회원이</h1>
+            <h1>아니시네요 !</h1>
         </div>
-        <div class="signup-contents">
-            {% if error %}
-            <p style="color: red;">{{ error }}</p>
-            {% endif %}
-            <form method="POST" class="form">
-                {% csrf_token %}
-                <input type="text" name="username" placeholder="아이디" class="signup-content">
-                <input type="password" name="password" placeholder="비밀번호" class="signup-content">
-                <button type="submit">회원가입</button>
-            </form>
-        </div>
-    </div>   
-    
-</body>
-</html>
+        <div class="suggestion_desc">
+            <p>간편 회원가입하고, 당신의</p>
+            <p>소중한 사람의 취향에 딱 맞는</p>
+            <p>선물을 추천받으세요.</p>
+            <button type="submit">회원가입</button>
+        </div>  
+{% endblock content %}
+

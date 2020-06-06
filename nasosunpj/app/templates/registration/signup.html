@@ -1,13 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'signup.css'%}">
-    <title>Document</title>
-</head>
-<body>
+
     <div class="signup">
         <div class="category">
             <h2>회원가입</h2>
@@ -24,6 +19,4 @@
             </form>
         </div>
     </div>   
-    
-</body>
-</html>
+{% endblock content %}

@@ -11,5 +11,11 @@
 
 </head>
 <body>
-    {% endblock content %}
+    <div class="nav_link">
+        <a class=login href="{% url 'login' %}">로그인</a>
+        <a class=signup href="{% url 'signup' %}">회원가입</a>
+    </div>
+        <a class=go_for_you href="{% url 'for_you' %}">선물 추천 받기</a>
+    
+     {% endblock content %}
 </body>
