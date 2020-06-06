@@ -8,34 +8,42 @@ from django.contrib import auth
 
 def for_you(request):
     if request.method == "POST":
-        
-        new_offer = Offer.objects.create(
-            user_no = request.user
-        )
-        new_result = Result.objects.create(
-            offer_no = new_offer
-        )
+        try:
+            new_offer = Offer.objects.create(
+                user_no = request.user
+            )
+            new_result = Result.objects.create(
+                offer_no = new_offer
+            )
 
-        temper_score = request.POST['temperament']
-        
-        if int(temper_score) > 50:
-            temp = "감성적"
-        else:
-            temp = "실용적"
+            temper_score = request.POST['temperament']
             
-        taste = request.POST['taste']
-        print(taste)
+            if int(temper_score) > 50:
+                temp = "감성적"
+            else:
+                temp = "실용적"
+                
+            taste = request.POST['taste']
+            
+            if int(request.POST['budget']) < 1:
+                error = "모든 항목을 바르게 입력해주세요."
+                return render(request, 'for_you.html', {'error' : error})
+                
+            budget = int(request.POST['budget'])*10000
 
-        new_requirement = Requirement.objects.create(
-            offer_no = new_offer,
-            gender =request.POST['gender'],
-            age =request.POST['age'],
-            taste = taste, 
-            temperament =temp,
-            purpose =request.POST['purpose'],
-            budget =request.POST['budget'],
-        )
-        return  redirect('result', new_result.pk)
+            new_requirement = Requirement.objects.create(
+                offer_no = new_offer,
+                gender =request.POST['gender'],
+                age =request.POST['age'],
+                taste = taste, 
+                temperament =temp,
+                purpose =request.POST['purpose'],
+                budget =budget,
+            )
+            return redirect('result', new_result.pk)
+        except: 
+            error = "모든 항목을 입력해주세요."
+            return render(request, 'for_you.html', {'error' : error})
     return render(request, 'for_you.html')
 
 def signup(request):
@@ -49,9 +57,11 @@ def signup(request):
             username=request.POST['username'],
             password=request.POST['password']
         )
-        auth.login(request, 
-                    new_user,
-                    backend='django.contrib.auth.backends.ModelBackend')
+        auth.login(
+            request, 
+            new_user,
+            backend='django.contrib.auth.backends.ModelBackend'
+        )
         return redirect('main')
 
     return render(request, 'registration/signup.html')
