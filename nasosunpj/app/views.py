@@ -7,23 +7,23 @@ from django.contrib import auth
 
 def for_you(request):
     if request.method == "POST":
-        print(request.POST['taste'])
+        
         new_offer = Offer.objects.create(
             user_no = request.user
         )
-        new_reslut = Result.objects.create(
+        new_result = Result.objects.create(
             offer_no = new_offer
         )
 
         temper_score = request.POST['temperament']
-        print(temper_score, type(temper_score))
-        if int(temper_score) > 50:
-            temp = "감성"
-        else:
-            temp = "실용"
-            
-        taste = request.POST['taste'][0]
         
+        if int(temper_score) > 50:
+            temp = "감성적"
+        else:
+            temp = "실용적"
+            
+        taste = request.POST['taste']
+        print(taste)
 
         new_requirement = Requirement.objects.create(
             offer_no = new_offer,
@@ -34,7 +34,7 @@ def for_you(request):
             purpose =request.POST['purpose'],
             budget =request.POST['budget'],
         )
-        return  redirect('spinner', new_result.offer_no)
+        return  redirect('spinner', new_result.pk)
     return render(request, 'for_you.html')
 
 def signup(request):
