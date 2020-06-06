@@ -3,9 +3,17 @@
 {% block title %}추천결과{% endblock title %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+<!DOCTYPE html>
 
-<div class="resultBox">
+<head>
+    <link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+</head>
+
+<div id = "loader">
+    <div  id = "loaderImg" class="lds-heart"><div></div></div>
+    <p class="loaderMessage">전문 퍼스널 쇼퍼가 취향에 딱 맞는 선물을 추천하고 있습니다!</p>
+</div>
+<div class="resultBox" id = "resultBox">
     <div class="resultBox__head">
         <p class="head__heading">나소선's pick</p>
     </div>
@@ -39,5 +47,14 @@
     <p class = "star">★★★★★</p>
     <a class = "reviewBox__again" href="http://">한번 더 추천받기</a>
 </div>
+<script type="text/javascript">
+    document.getElementById("loader").style.display = "flex";
+    document.getElementById("resultBox").style.display = "none";
 
+    setTimeout(()=>{
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("resultBox").style.display = "block";
+    },3000);
+
+</script>
 {% endblock content %}
