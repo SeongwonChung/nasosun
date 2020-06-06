@@ -2,9 +2,11 @@
     Box-sizing: border-box;}
 
 .for_you_container{
-    margin: 0 36px;
+    margin-left:36px;
+    margin-right: 36px;
     display: block;
     justify-content: center;
+    margin-top:111px;
 }
     
 .for_you_title{
@@ -246,7 +248,7 @@
     border-radius: 15px;
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -254,6 +256,10 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
+    color: #ffca61;
+    border:none;
+}
+::placeholder{
     color: #ffca61;
 }
 .for_you_submit_container{

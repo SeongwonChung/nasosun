@@ -103,4 +103,4 @@ def main(request):
     return render(request, 'main.html')
 
 def membership_suggestion(request):
-    return redirect('registration/signup')
+    return render(request, 'membership_suggestion.html')
