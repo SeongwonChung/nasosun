@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('spinner/<int:offer_no>', views.spinner, name = "spinner" ),
+    path('result/<int:result_pk>', views.result, name="result"),
 ]

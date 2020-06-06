@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="resultBox">
+        <div class="resultBox__head">
+            <h2 class="head__heading">나소선's pick</h2>
+        </div>
+        <ul class="resultBox__productlist">
+            {% for product in products %}
+            <li class="productlist__item">
+                <div class="item__summary">
+                    <h3 class="itemName">{{product.name}}</h3>
+                    <p class="itemPrice">{{product.price}}</p>
+                    <img class="itemImg" src="{{product.img_url}}">
+                </div>
+                <div class="item__right">
+                    <div class="right__tags">
+                        <span>#{{requirement.age}}</span>
+                        <span>#{{requirement.gender}}</span>
+                        <span>#{{requirement.taste}}</span>
+                        <span>#{{requirement.temperament}}</span>
+                    </div>
+                    <div class="right__purchase">
+                        <a class="purchase__link" href="{{product.product.url}}">구매하러가기</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="reviewBox">
+        <p class = "reviewBox__message">추천 결과는 마음에 드셨나요?</p>
+        <p class = "star">★★★★★</p>
+        <a class = "reviewBox__again" href="http://">한번 더 추천받기</a>
+    </div>
+</body>
+</html>
