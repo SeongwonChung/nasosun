@@ -15,12 +15,13 @@ body{
     top: 0px;
     left: 0px;
     border-radius: 0 0 20px 20px;
+    z-index: 20;
 }
 .header_line{
     position: fixed;
     top: 57.8px;
     left : 10px;
-    z-index: 1;
+    z-index: 30;
     width: 93%;
     margin: 0 auto;
     border-bottom: #FFB532 solid 2px;
@@ -30,6 +31,7 @@ body{
     top: 11px; left: 36px;
     width: 56px;
     height: 39px;
+    z-index: 30;
     
 }
 
