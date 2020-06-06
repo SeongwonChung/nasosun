@@ -58,23 +58,27 @@ def signup(request):
 
 def login(request):
     if request.method == 'POST':
-        found_user=auth.authenticate(
+        print(request.POST)
+
+        found_user=User.objects.get(
             username=request.POST['username'],
             password=request.POST['password']
         )
-        if found_user is not None :
+
+        print(found_user)
+
+        if found_user is None :
             error='아이디 또는 비밀번호가 틀렸습니다'
             return render(request, 'registration/login.html',{'error':error})
 
-        auth.login(
-            request, 
-            found_user,
-            backend='django.contrib.auth.backends.ModelBackend'
-        )
+        auth.login(request, 
+                    found_user,
+                    backend='django.contrib.auth.backends.ModelBackend')
 
         return redirect(request.GET.get('next','/'))
 
     return render(request, 'registration/login.html')
+    
 import time
 
 def logout(request):
