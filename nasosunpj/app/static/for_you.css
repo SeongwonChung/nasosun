@@ -537,7 +537,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 100px;
+      padding-top: 200px;
   }
   
   #loaderImg {
@@ -547,14 +547,14 @@
   }
 
   .loaderMessage {
-    width: 280px;
+    width: 290px;
     height: 67px;
-    font-size: 16.5px;
+    font-size: 17px;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 2.22;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.7px;
     text-align: center;
     color: #FFBA32;
     margin-top: 86.5px;
