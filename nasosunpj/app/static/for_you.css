@@ -25,13 +25,13 @@
     width: 249px;
     height: 55px;
     font-size: 21px;
-    font-weight: 900;
+    font-weight: bolder;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.25;
     letter-spacing: 0.96px;
     text-align: left;
-    color: #ffa900;
+    color: #FF7600;
 }
 .for_you_sub_title{
     width: 180px;
@@ -92,7 +92,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
     display: inline-block;
     margin: 3px;
     /* display:flex;
@@ -109,7 +109,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
     display: inline-block;
     /* display:flex;
     justify-content: space-around; */
@@ -131,7 +131,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
     margin: 3px;
 }
 .box_radio_age input[type="radio"]:checked + label {
@@ -146,7 +146,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
 }
 .box_checkbox input[type="checkbox"] {
     opacity: 0;
@@ -165,7 +165,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
     margin: 3px;
 }
 .box_checkbox input[type="checkbox"]:checked + label {
@@ -180,7 +180,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
 }
 .box_slider{
     display: flex;
@@ -200,7 +200,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
 }
 .slider{
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -237,7 +237,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
     margin: 3px;
 }
 .box_radio_purpose input[type="radio"]:checked + label {
@@ -252,27 +252,63 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #FFBA32;
+    color: #FF9200;
+}
+
+/* .box_radio_purpose input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+.box_radio_purpose label {
+    width: 66px;
+    height: 65px;
+    background-color: #ffffff;
+}
+.box_radio_purpose input[type="radio"]:checked + label {
+    width: 66px;
+    height: 65px;
+    background-color: #ffffff;
+}
+.purpose_img{
+    width: 66px;
+    height: 65px;
+} */
+.box_budget_container{
+    width:100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .box_budget{
-    width: 279px;
-    height: 30px;
-    border-radius: 15px;
-    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
+    width: 68px;
+    height: 45px;
+    border: solid 2px #b6b6b6;
+    border-radius: 2px;
     /* opacity: 0.5; */
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
+    font-size: 22px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #FFBA32;
-    border:none;
+    font-weight: bolder;
+}
+.box_budget_text{
+    width: 60px;
+    height: 37px;
+
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: 1.25px;
+    text-align: right;
+    color: #ff9200;
 }
 ::placeholder{
-    color: #FFBA32;
+    color: #FF9200;
 }
 .for_you_submit_container{
     width:100%;
@@ -286,7 +322,7 @@
     height: 35px;
     border-radius: 10px;
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffa900;
+    background-color: #FF9200;
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
@@ -321,7 +357,6 @@
 .head__heading {
     width: 160px;
     height: 36px;
-    font-family: NotoSansKR;
     font-size: 24px;
     font-weight: 900;
     font-stretch: normal;
@@ -376,7 +411,6 @@
 .itemPrice {
     width: 56px;
     height: 18px;
-    font-family: NotoSansKR;
     font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
@@ -509,13 +543,13 @@
   #loader {
       width: 100%;
       height: 100%;
-      z-index: 100;
+      z-index: 10;
       background-color: #ffffff;
       position: absolute;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 100px;
+      padding-top: 200px;
   }
   
   #loaderImg {
@@ -525,16 +559,21 @@
   }
 
   .loaderMessage {
-    width: 280px;
+    width: 290px;
     height: 67px;
-    font-family: NotoSansKR;
-    font-size: 16.5px;
+    font-size: 17px;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 2.22;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.7px;
     text-align: center;
     color: #FFBA32;
     margin-top: 86.5px;
+}
+
+#error {
+  font-weight: 700;
+  color: rgb(241, 20, 20);
+  margin-top: 10px;
 }
