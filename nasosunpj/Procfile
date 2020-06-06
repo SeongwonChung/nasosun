@@ -1,0 +1,1 @@
+web:gunicorn nasosunpj.wsgi --log-file -
