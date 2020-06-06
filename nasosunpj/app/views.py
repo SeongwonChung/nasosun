@@ -35,7 +35,7 @@ def for_you(request):
             purpose =request.POST['purpose'],
             budget =request.POST['budget'],
         )
-        return  redirect('spinner', new_result.pk)
+        return  redirect('result', new_result.pk)
     return render(request, 'for_you.html')
 
 def signup(request):
@@ -77,35 +77,40 @@ def login(request):
     return render(request, 'registration/login.html')
 import time
 
+def logout(request):
+    auth.logout(request)
+    return redirect('main')
+
 # Create your views here.
 def spinner(request, offer_no):
     requirement = Requirement.objects.get(offer_no = offer_no)
     result = Result.objects.get(offer_no = offer_no)
 
-    age = requirement.age
-    gender = requirement.gender
-    budget = requirement.budget
-
-    result_pk = result.pk
-    
-    for i in range(3):
-        product = GetProductInfo(age, gender, budget)
-        new_product = Product.objects.create(
-            name = product['name'],
-            img_url = product['img_url'],
-            price = product['price'],
-            product_url = product['product_url'],
-            result_no = result
-        )
-    
-    return redirect('result', result_pk)
-
 def result(request, result_pk):
     result = Result.objects.get(offer_no = result_pk)
     requirement = Requirement.objects.get(offer_no = result_pk)
-    products = result.products.all()
 
-    return render(request, 'result.html', {'requirement' : requirement, 'products': products})
+    age = requirement.age
+    gender = requirement.gender
+    budget = requirement.budget
+   
+    cnt = 0
+    while cnt < 3:
+        product = GetProductInfo(age, gender, budget)
+        found_product = Product.objects.filter(result_no = result, name=product['name'])
+        if len(found_product) == 0:
+            new_product = Product.objects.create(
+                name = product['name'],
+                img_url = product['img_url'],
+                price = product['price'],
+                product_url = product['product_url'],
+                result_no = result
+            )
+            cnt+=1
+        
+    products = list(result.products.all().values())[0:3]
+
+    return render(request, 'result.html', {'requirement' : requirement, 'products': products,})
 
 
 def main(request):

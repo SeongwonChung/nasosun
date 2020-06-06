@@ -3,9 +3,13 @@
 {% block title %}추천결과{% endblock title %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+<!DOCTYPE html>
 
-<div class="resultBox">
+<head>
+    <link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+</head>
+
+<div class="resultBox" id = "resultBox">
     <div class="resultBox__head">
         <p class="head__heading">나소선's pick</p>
     </div>
