@@ -1,6 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +15,7 @@
     <div class="header_line">
     </div>
     <img class="logo_img" src="../static/img/그룹 16@3x.png"  alt="로고">
-    
+    <a class="logo_img" href="{% url 'main' %}"></a>
     {% block content %}
     {% endblock content %}
 </body>
-</html>
