@@ -24,14 +24,17 @@ body{
     z-index: 30;
     width: 93%;
     margin: 0 auto;
-    border-bottom: #FFB532 solid 2px;
+    border-bottom: #FF9200 solid 2px;
 }
 .logo_img{
     position: fixed;
-    top: 11px; left: 36px;
+    top: 13px; left: 33px;
     width: 56px;
+<<<<<<< HEAD
+=======
     height: 39px;
     z-index: 30;
     
+>>>>>>> 50a71d3787863b5a52a26f4608cb0c1aa214657e
 }
 
