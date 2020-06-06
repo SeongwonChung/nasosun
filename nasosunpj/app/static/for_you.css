@@ -526,3 +526,9 @@
     color: #FFBA32;
     margin-top: 86.5px;
 }
+
+#error {
+  font-weight: 700;
+  color: rgb(241, 20, 20);
+  margin-top: 10px;
+}
