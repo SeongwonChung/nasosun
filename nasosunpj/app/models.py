@@ -27,20 +27,11 @@ class Requirement(models.Model):
         ('여자','여자')
     )
 
-    TASTE = (
-        ('실용','실용적'),
-        ('고급','고급스러운')
-    )
-
-    TEMPERAMENT = (
-        ('외향적','외향적'),
-        ('내향적','내향적')
-    )
     offer_no = models.OneToOneField(Offer, on_delete = models.CASCADE, primary_key = True)
     gender = models.CharField(max_length = 2, choices = GENDER)
     age = models.IntegerField()
-    taste = models.CharField(max_length = 2, choices = TASTE) #취향
-    temperament = models.CharField(max_length = 3, choices = TEMPERAMENT) #성향
+    taste = models.CharField(max_length = 10) #성향
+    temperament = models.CharField(max_length = 10) #취향
     purpose = models.CharField(max_length = 100)
     budget = models.IntegerField()
 
