@@ -32,25 +32,188 @@ a {
     
     margin-right: 19px;
 }
-.content_outline{
+.content_container{
+  
+    margin-top:111px;
     width: 100%;
+    
 }
 .content{
-    width: 80%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
     
 }
 .nasosun{
     width: 70%;
+    margin-left: 10px;
+    
 }
 .drawing{
     width: 60%;
 }
+.question{
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #ffa900;
+    margin: 0;
+}
 .span_box{
-    width: 60%;
+    width: 80%;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffca61;
 }
 .gift_box{
+    margin: 98px 0 0 0;
+    width: 30%;
+}
+.solution{
+    margin: 3.6px 0;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.72px;
+    text-align: center;
+    color: #ffca61;
+    letter-spacing: normal;
+}
+.info{
+    margin-top: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #ffa900;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.circle_01{
+    width: 69px;
+    height: 69px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 3px #ffca61;
+    background-color: #ffffff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.icon_01{
     width: 60%;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.num{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.33;
+    letter-spacing: 0.36px;
+    color: #ffa900;
+    margin: 0 8%;
+}
+.word{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: 1.4px;
+    color: #ffca61;
+    margin: 0 5%;
+}
+
+
+/* .num{
+    height: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.num_01{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.33;
+    letter-spacing: 0.36px;
+    color: #ffa900;
+    margin: 0 8%;
+
+}
+.word{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.word_01{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: 1.4px;
+    color: #ffca61;
+    margin: 0 5%;
+
+} */
+.last{
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffca61;
+
 }
 .go_for_you{
 
