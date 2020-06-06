@@ -1,0 +1,33 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <div class="category">
+            <h2>로그인</h2>
+        </div>
+        <div class="login-contents">
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="아이디" class="login-content">
+                <input type="password" name="password" placeholder="비밀번호" class="login-content">
+                <button type="submit">로그인</button>
+            </form>
+            <a href="{% provider_login_url 'kakao'%}"><div class="kakao"><p><i class="fa fa-comment fa-lg" style="margin-right: 7px;"></i>카카오 계정으로 로그인</p></div></a>
+        </div>
+    </div>   
+    
+</body>
+</html>
