@@ -21,13 +21,12 @@
 .head__heading {
     width: 148px;
     height: 36px;
-    /* font-family: NotoSansKR ;*/
     font-size: 24px;
     font-weight: 900;
     text-align: left;
     line-height: 1.25;
     letter-spacing: 0.48px;
-    color: rgb(#ffa900);
+    color: #ffa900;
 }
 
 .resultBox__productlist {
@@ -46,13 +45,15 @@
     box-shadow: 3px 2px 10px 0px rgba(0,0,0,0.16);
     background-color: #ffffff;
 
+    display: flex;
+
     margin-bottom: 40px;
 }
 
 .item__summary {
     width: 135px;
     height: 210px;
-
+    padding-top: 22px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,10 +61,84 @@
 .itemName {
     width: 135px;
     height: 20px;
-    font-family: NotoSansKR;
     font-size: 14px;
     font-weight: 900;
     line-height: 2.14;
     letter-spacing: 0.28px;
     color: #ffca61;
+    margin-bottom: 6px;
 }
+
+.itemPrice {
+    width: 56px;
+    height: 18px;
+    font-family: NotoSansKR;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.5;
+    letter-spacing: 0.24px;
+    text-align: left;
+    color: #ffca61;
+
+    margin-bottom:14px;
+}
+
+.itemImg{
+    width: 135px;
+    height: 109px;
+    border: solid 1px #707070;
+  }
+
+.item__right{
+    width: 107px;
+    padding-left: 13px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+} 
+
+.right__tags{
+    width: 98px;
+    padding-left: 9px;
+    color: #ffca61;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.5;
+    letter-spacing: 0.17px;
+
+    margin-top: 93px;
+    margin-bottom: 38px;
+}
+.right__purchase {
+    width: 107px;
+    height: 25px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffa900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.purchase__link{
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.75;
+    letter-spacing: 0.24px;
+    color: #ffffff;
+
+    width: 107px;
+    height: 25px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffa900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

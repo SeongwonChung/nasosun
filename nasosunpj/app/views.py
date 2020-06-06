@@ -82,8 +82,7 @@ def spinner(request, offer_no):
             product_url = product['product_url'],
             result_no = result
         )
-        
-
+    
     return redirect('result', result_pk)
 
 def result(request, result_pk):
