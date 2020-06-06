@@ -12,12 +12,14 @@
 </head>
 <body>
     <div class="nav_link">
-        <!-- {% if user.is_authenticated %}
-        <p class="welcome" >반가워요, {{user.username}}님</p>
-        {% endif %} -->
-        
+
+        {% if user.is_authenticated %}
+        <div class="signup">안녕하세요, {{user.username}}님</div>
+        <a class="signup" href="{% url 'logout' %}">로그아웃</a>
+        {% else %}
         <a class=login href="{% url 'login' %}">로그인</a>
         <a class=signup href="{% url 'signup' %}">회원가입</a>
+        {% endif %}
     </div>
       
     <div class="content_container">
