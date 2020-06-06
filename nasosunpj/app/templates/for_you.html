@@ -77,6 +77,7 @@
         <br>
             <div class="box_radio_purpose"> 
                 <input id="radio_birth" type="radio" name="purpose" value="birth">
+                <!-- <img class ="purpose_img" src="../static/img/1_.png" alt=""> -->
                 <label for="radio_birth">생일선물</label>
                 <input id="radio_anni"type="radio" name="purpose" value="anni">  
                 <label for="radio_anni">기념일선물</label>
@@ -91,7 +92,10 @@
         <div class="box">
             <div class="box_title">예산</div>
         <br>
-            <input class="box_budget" type="number" name="budget" placeholder="계획하신 예산을 입력해주세요">         
+            <div class="box_budget_container">
+            <input class="box_budget" type="number" name="budget" placeholder="|">
+            <span class="box_budget_text">만원</span>
+            </div>        
         </div>
         <div class="for_you_submit_container">
         <button id = "for_you_submit" class="for_you_submit" type="submit">선물 추천 받기</button>   
