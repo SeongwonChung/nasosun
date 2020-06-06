@@ -117,9 +117,7 @@
 .right__purchase {
     width: 107px;
     height: 25px;
-    border-radius: 20px;
-    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffa900;
+
 
     display: flex;
     justify-content: center;
