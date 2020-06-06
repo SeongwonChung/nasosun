@@ -1,0 +1,100 @@
+*{ margin: 0;
+    Box-sizing: border-box;}
+    
+.for_you_title{
+    width: 249px;
+    height: 55px;
+    font-family: NotoSansKR;
+    font-size: 21px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.96px;
+    text-align: left;
+    color: #ffa900;
+}
+.for_you_sub_title{
+    width: 180px;
+    height: 18px;
+    font-family: NotoSansKR;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffca61;
+}
+.box{
+    width:100%;
+    height:140px;
+    /* background-color: red; */
+    margin:100px 0;
+    /* margin: 100px 36px; */
+}
+.box_title{
+    width: 78px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffca61;
+    font-family: AppleSDGothicNeoB00;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff; 
+}
+.box_option{
+    width: 78px;
+    height: 30px;
+    border: solid 1px #b6b6b6;
+    background-color: #ffffff;
+
+}
+.box_radio input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+.box_radio label {
+    width: 78px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(182, 182, 182, 0.2);
+    background-color: #ffffff;
+    display: inline-block;
+    font-family: AppleSDGothicNeoB00;
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffca61;
+}
+.box_radio input[type="radio"]:checked + label {
+    width: 78px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1.5px #b6b6b6;
+    background-color: #ffffff;
+    display: inline-block;
+    font-family: AppleSDGothicNeoB00;
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffca61;
+}
+/* .box_radio input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+.box_radio label:hover {
+    background-color: #dfd;
+  } */
