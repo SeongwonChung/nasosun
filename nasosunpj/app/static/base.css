@@ -10,9 +10,11 @@
     Box-sizing: border-box;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     position: static;
+    display: block;
     border-radius: 0 0 20px 20px;
 }
 .header_line{
+    display: block;
     z-index: 1;
     width: 93%;
     height: 58px;
@@ -22,6 +24,7 @@
     border-bottom: #FFB532 solid 2px;
 }
 .logo_img{
+    display: block;
     width: 56px;
     height: 39px;
     position: absolute;
