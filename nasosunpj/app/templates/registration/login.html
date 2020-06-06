@@ -4,6 +4,8 @@
 {% load socialaccount %}
 {% providers_media_js %}
     <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <div class="login">
         <div class="category">
             <h2>로그인</h2>
@@ -16,9 +18,9 @@
                 {% csrf_token %}
                 <input type="text" name="username" placeholder="아이디" class="login-content">
                 <input type="password" name="password" placeholder="비밀번호" class="login-content">
+                <a href="{% provider_login_url 'kakao'%}"><div class="kakao"><p><i class="fa fa-comment fa-lg" style="margin-right: 7px;"></i>카카오 계정으로 로그인</p></div></a>
                 <button type="submit">로그인</button>
             </form>
-            <a href="{% provider_login_url 'kakao'%}"><div class="kakao"><p><i class="fa fa-comment fa-lg" style="margin-right: 7px;"></i>카카오 계정으로 로그인</p></div></a>
-        </div>
+        </div> 
     </div>  
 {% endblock content %}
