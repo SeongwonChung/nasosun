@@ -35,3 +35,5 @@ def result(request, result_pk):
     return render(request, 'result.html', {'requirement' : requirement, 'products': products})
 
 
+def main(request):
+    return render(request, 'main.html')
