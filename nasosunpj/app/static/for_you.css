@@ -1,10 +1,15 @@
 *{ margin: 0;
     Box-sizing: border-box;}
+
+.for_you_container{
+    margin: 0 36px;
+    display: block;
+    justify-content: center;
+}
     
 .for_you_title{
     width: 249px;
     height: 55px;
-    font-family: NotoSansKR;
     font-size: 21px;
     font-weight: 900;
     font-stretch: normal;
@@ -17,7 +22,6 @@
 .for_you_sub_title{
     width: 180px;
     height: 18px;
-    font-family: NotoSansKR;
     font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
@@ -29,9 +33,9 @@
 }
 .box{
     width:100%;
-    height:140px;
+    height:50px;
     /* background-color: red; */
-    margin:100px 0;
+    margin:40px 0 100px 0;
     /* margin: 100px 36px; */
 }
 .box_title{
@@ -40,7 +44,6 @@
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffca61;
-    font-family: AppleSDGothicNeoB00;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -61,6 +64,8 @@
     opacity: 0;
     position: fixed;
     width: 0;
+    /* display:flex;
+    justify-content: space-around; */
   }
 .box_radio_gender label {
     width: 78px;
@@ -69,13 +74,15 @@
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
     border: solid 1px rgba(182, 182, 182, 0.2);
     background-color: #ffffff;
-    display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffca61;
+    display: inline-block;
+    margin: 3px;
+    /* display:flex;
+    justify-content: space-around; */
 }
 .box_radio_gender input[type="radio"]:checked + label {
     width: 78px;
@@ -84,13 +91,14 @@
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
     border: solid 2px #b6b6b6;
     background-color: #ffffff;
-    display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffca61;
+    display: inline-block;
+    /* display:flex;
+    justify-content: space-around; */
 }
 .box_radio_age input[type="radio"] {
     opacity: 0;
@@ -105,12 +113,12 @@
     border: solid 1px rgba(182, 182, 182, 0.2);
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffca61;
+    margin: 3px;
 }
 .box_radio_age input[type="radio"]:checked + label {
     width: 78px;
@@ -120,7 +128,6 @@
     border: solid 2px #b6b6b6;
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
@@ -140,12 +147,12 @@
     border: solid 1px rgba(182, 182, 182, 0.2);
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffca61;
+    margin: 3px;
 }
 .box_checkbox input[type="checkbox"]:checked + label {
     width: 78px;
@@ -155,7 +162,6 @@
     border: solid 2px #b6b6b6;
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
@@ -165,6 +171,7 @@
 .box_slider{
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 .box_slider_text{
@@ -175,7 +182,6 @@
     border: solid 1px rgba(182, 182, 182, 0.2);
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
@@ -185,11 +191,20 @@
 .slider{
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 164px;
+    width: 150px;
+    margin: 0 10px;
     height: 1px;
-    border: solid 3px #b6b6b6;
-    color:red;
+    border: solid 2px #b6b6b6;
 }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffca61; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
 
 .box_radio_purpose input[type="radio"] {
     opacity: 0;
@@ -204,12 +219,12 @@
     border: solid 1px rgba(182, 182, 182, 0.2);
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffca61;
+    margin: 3px;
 }
 .box_radio_purpose input[type="radio"]:checked + label {
     width: 78px;
@@ -219,7 +234,6 @@
     border: solid 2px #b6b6b6;
     background-color: #ffffff;
     display: inline-block;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: normal;
@@ -233,7 +247,6 @@
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
     opacity: 0.5;
-    font-family: AppleSDGothicNeoB00;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -243,14 +256,19 @@
     text-align: center;
     color: #ffca61;
 }
-
+.for_you_submit_container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 100px 0;
+}
 .for_you_submit{
+    border:none;
     width: 154px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffa900;
-    font-family: NotoSansKR;
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
