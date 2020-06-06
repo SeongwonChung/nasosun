@@ -7,22 +7,34 @@ from django.contrib import auth
 
 def for_you(request):
     if request.method == "POST":
-         new_offer = Offer.objects.create(
-             user_no = request.user.pk
-         )
-         new_result = Result.objects.create(
-             offer_no = new_offer.pk
-         )
-         new_requirement = Requirement.objects.create(
-             offer_no = new_offer.pk,
-             gender =request.POST['gender'],
-             age =request.POST['age'],
-             taste =request.POST['taste'],
-             temperament =request.POST['temperament'],
-             purpose =request.POST['purpose'],
-             budget =request.POST['budget'],
-         )
-         return  redirect('spinner', new_result.offer_no)
+        
+        new_offer = Offer.objects.create(
+            user_no = request.user
+        )
+        new_result = Result.objects.create(
+            offer_no = new_offer
+        )
+
+        temper_score = request.POST['temperament']
+        
+        if int(temper_score) > 50:
+            temp = "감성적"
+        else:
+            temp = "실용적"
+            
+        taste = request.POST['taste']
+        print(taste)
+
+        new_requirement = Requirement.objects.create(
+            offer_no = new_offer,
+            gender =request.POST['gender'],
+            age =request.POST['age'],
+            taste = taste, 
+            temperament =temp,
+            purpose =request.POST['purpose'],
+            budget =request.POST['budget'],
+        )
+        return  redirect('spinner', new_result.pk)
     return render(request, 'for_you.html')
 
 def signup(request):
@@ -99,4 +111,4 @@ def main(request):
     return render(request, 'main.html')
 
 def membership_suggestion(request):
-    return redirect('registration/signup')
+    return render(request, 'membership_suggestion.html')
