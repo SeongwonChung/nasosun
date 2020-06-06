@@ -8,10 +8,14 @@ def GetProductInfo(age, gender, budget):
     gender_check = gender
     max_price = budget
     min_price = budget - budget//2
+    product_M = ["가방", "시계", "셔츠", "향수", "신발", "스포츠", "지갑", "화장품", "음악", "니트"]
+    product_W = ["가방", "목걸이", "향수", "구두", "원피스", "지갑", "화장품", "귀걸이", "음악", "치마", "니트"]
+    
     if gender_check == "남자":
-        product_type_list = ["가방", "시계", "셔츠", "향수", "신발", "스포츠", "지갑", "화장품"]
+        product_type_list = product_M
     else:
-        product_type_list = ["가방", "목걸이", "향수", "구두", "원피스", "지갑", "화장품", "귀걸이"]
+        product_type_list = product_W
+
     product_type = random.choice(product_type_list)
 
     name_input = age_group + gender_check + product_type
