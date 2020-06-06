@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/for_you.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="for_you_title">선물 받으실 분의 정보를<br>입력해주세요.</div>
+    <div class="for_you_sub_title">자기자신을 위한 선물도 좋아요:)</div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="box">
+            <div class="box_title">성별</div>
+        <br>
+        <div class="box_radio"> 
+            <input id="radioMan" type="radio" name="gender">
+            <label for="radioMan">남성</label>
+            <input id="radioWoman"type="radio" name="gender">  
+            <label for="radioWoman">여성</label>
+        </div>
+        </div>
+        <div>연령<br>
+            <label>10대 이하</label>
+            <input type="radio" name="age">
+            <label>20대</label>
+            <input type="radio" name="age"> 
+            <label>30대</label>
+            <input type="radio" name="age"> 
+            <label>40대</label>
+            <input type="radio" name="age"> 
+            <label>50대 이상</label>
+            <input type="radio" name="age"> 
+        </div> 
+        <div>성향<br>
+            <label>#내향형</label>
+            <input type="checkbox" name="taste">
+            <label>#외향형</label>
+            <input type="checkbox" name="taste">   
+            <label>#집순이형</label>
+            <input type="checkbox" name="taste">
+            <label>#스포츠형</label>
+            <input type="checkbox" name="taste">
+            <label>#예술형</label>
+            <input type="checkbox" name="taste">     
+        </div>
+        <div>취향<br>
+            <label>실용주의</label>
+            <input type="range" min="1" max="100"  name="temperment">
+            <label>감성주의</label>
+        </div> 
+        <div>목적<br>
+            <label>생일선물</label>
+            <input type="radio" name="purpose">
+            <label>기념일선물</label>
+            <input type="radio" name="purpose"> 
+            <label>축하선물</label>
+            <input type="radio" name="purpose"> 
+            <label>일상선물</label>
+            <input type="radio" name="purpose">   
+        </div>
+        <div>
+            <label>예산</label>
+            <input type="number" name="budget">  
+        </div>  
+        <button type="submit">제출하기</button>             
+    </form>
+</body>
+</html>
