@@ -6,6 +6,7 @@ def GetProductInfo(age, gender, budget):
     #상품이름 문자열 가공
     age_group = str((age//10)*10)+"대"
     gender_check = gender
+    budget = budget 
     max_price = budget
     min_price = budget - budget//2
     product_M = ["가방", "시계", "셔츠", "향수", "신발", "스포츠", "지갑", "화장품", "음악", "니트"]

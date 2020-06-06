@@ -16,6 +16,9 @@
     <div class="for_you_title">선물 받으실 분의 정보를<br>입력해주세요.</div>
     <div class="for_you_sub_title">자기자신을 위한 선물도 좋아요:)</div>
     <form method="POST">
+        {% if error %}
+        <p id="error">{{error}}</p>
+        {% endif %}
         {% csrf_token %}
         <div class="box">
             <div class="box_title">성별</div>
