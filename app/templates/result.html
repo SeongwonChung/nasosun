@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}추천결과{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'result.css' %}">
+
+<div class="resultBox">
+    <div class="resultBox__head">
+        <p class="head__heading">나소선's pick</p>
+    </div>
+    <ul class="resultBox__productlist">
+        {% for product in products %}
+        <li class="productlist__item">
+            <div class="item__summary">
+                <h3 class="itemName">{{product.name}}</h3>
+                <p class="itemPrice">{{product.price}}원</p>
+                <img class="itemImg" src="{{product.img_url}}">
+            </div>
+            <div class="item__right">
+                <div class="right__tags">
+                    <span>#{{requirement.age}}</span>
+                    <span>#{{requirement.gender}}</span>
+                    <br>
+                    <span>#{{requirement.temperament}}</span>
+                    <br>
+                    <span>#{{requirement.taste}}</span>
+                </div>
+                <div class="right__purchase">
+                    <a class="purchase__link" href="{{product.product_url}}">구매하러가기</a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="reviewBox">
+    <p class = "reviewBox__message">추천 결과는 마음에 드셨나요?</p>
+    <p class = "star">★★★★★</p>
+    <a class = "reviewBox__again" href="http://">한번 더 추천받기</a>
+</div>
+
+{% endblock content %}

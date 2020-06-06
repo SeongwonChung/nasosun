@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'signup.css'%}">
+
+    <div class="signup">
+        <div class="category">
+            <h2>회원가입</h2>
+        </div>
+        <div class="signup-contents">
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="아이디" class="signup-content">
+                <input type="password" name="password" placeholder="비밀번호" class="signup-content">
+                <button type="submit">회원가입</button>
+            </form>
+        </div>
+    </div>   
+{% endblock content %}

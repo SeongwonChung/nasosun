@@ -1,0 +1,21 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>{% block title %} 제목 {% endblock title %}</title>
+</head>
+<body>
+    
+    <div class="header">
+        
+    </div>
+    <div class="header_line">
+    </div>
+    <img class="logo_img" src="../static/img/그룹 16@3x.png"  alt="로고">
+    <a class="logo_img" href="{% url 'main' %}"></a>
+    {% block content %}
+    {% endblock content %}
+</body>

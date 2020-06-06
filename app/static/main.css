@@ -1,0 +1,57 @@
+a {
+    text-decoration: none;
+}
+.nav_link{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top : 23px;
+    z-index: 1;
+    position: fixed;
+}
+.login{
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.5;
+    letter-spacing: 0.24px;
+    color: #ffffff;
+    
+}
+.signup{
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.5;
+    letter-spacing: 0.24px;
+    color: #ffffff;
+    
+    margin-right: 19px;
+}
+.content_outline{
+    width: 100%;
+}
+.content{
+    width: 80%;
+    text-align: center;
+    
+}
+.nasosun{
+    width: 70%;
+}
+.drawing{
+    width: 60%;
+}
+.span_box{
+    width: 60%;
+}
+.gift_box{
+    width: 60%;
+}
+.go_for_you{
+
+}
