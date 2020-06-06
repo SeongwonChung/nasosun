@@ -76,6 +76,10 @@ def login(request):
     return render(request, 'registration/login.html')
 import time
 
+def logout(request):
+    auth.logout(request)
+    return redirect('main')
+
 # Create your views here.
 def spinner(request, offer_no):
     requirement = Requirement.objects.get(offer_no = offer_no)
