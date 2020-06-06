@@ -1,1 +1,1 @@
-web:gunicorn nasosunpj.wsgi --log-file -
+web: gunicorn nasosunpj.wsgi --log-file -
