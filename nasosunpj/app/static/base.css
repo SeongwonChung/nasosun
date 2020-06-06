@@ -28,9 +28,8 @@ body{
 }
 .logo_img{
     position: fixed;
-    top: 13px; left: 33px;
+    top: 14px; left: 33px;
     width: 56px;
-    height: 39px;
     z-index: 30;
     
 }
