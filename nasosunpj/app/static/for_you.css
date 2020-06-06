@@ -31,7 +31,7 @@
     line-height: 2.08;
     letter-spacing: normal;
     text-align: left;
-    color: #ffca61;
+    color: #FFBA32;
 }
 .box{
     width:100%;
@@ -45,7 +45,7 @@
     height: 30px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffca61;
+    background-color: #FFBA32;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -80,7 +80,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     display: inline-block;
     margin: 3px;
     /* display:flex;
@@ -97,7 +97,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     display: inline-block;
     /* display:flex;
     justify-content: space-around; */
@@ -119,7 +119,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     margin: 3px;
 }
 .box_radio_age input[type="radio"]:checked + label {
@@ -134,7 +134,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
 }
 .box_checkbox input[type="checkbox"] {
     opacity: 0;
@@ -153,7 +153,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     margin: 3px;
 }
 .box_checkbox input[type="checkbox"]:checked + label {
@@ -168,7 +168,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
 }
 .box_slider{
     display: flex;
@@ -188,7 +188,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
 }
 .slider{
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -204,7 +204,7 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: #ffca61; /* Green background */
+    background: #FFBA32; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
 
@@ -225,7 +225,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     margin: 3px;
 }
 .box_radio_purpose input[type="radio"]:checked + label {
@@ -240,7 +240,7 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
 }
 .box_budget{
     width: 279px;
@@ -256,11 +256,11 @@
     line-height: 1.79;
     letter-spacing: normal;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     border:none;
 }
 ::placeholder{
-    color: #ffca61;
+    color: #FFBA32;
 }
 .for_you_submit_container{
     width:100%;
@@ -357,7 +357,7 @@
     font-weight: 900;
     line-height: 2.14;
     letter-spacing: 0.28px;
-    color: #ffca61;
+    color: #FFBA32;
     margin-bottom: 6px;
 }
 
@@ -372,7 +372,7 @@
     line-height: 2.5;
     letter-spacing: 0.24px;
     text-align: left;
-    color: #ffca61;
+    color: #FFBA32;
 
     margin-bottom:14px;
 }
@@ -398,7 +398,7 @@
     width: 98px;
     padding: 30px 0px 0px 9px;
 
-    color: #ffca61;
+    color: #FFBA32;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.5;
@@ -453,7 +453,7 @@
     position: absolute;
     width: 32px;
     height: 32px;
-    background: #ffca61;
+    background: #FFBA32;
     animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .lds-heart div:after,
@@ -463,7 +463,7 @@
     display: block;
     width: 32px;
     height: 32px;
-    background: #ffca61;
+    background: #FFBA32;
   }
   .lds-heart div:before {
     left: -24px;
@@ -507,7 +507,7 @@
   }
   
   #loaderImg {
-      color: #ffca61;
+      color: #FFBA32;
       /* position: relative; */
       /* bottom: 200px; */
   }
@@ -523,6 +523,6 @@
     line-height: 2.22;
     letter-spacing: 0.9px;
     text-align: center;
-    color: #ffca61;
+    color: #FFBA32;
     margin-top: 86.5px;
 }

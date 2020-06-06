@@ -69,7 +69,11 @@
                
                 <p class="last">선물할 사람에 대한 간단한 정보만 입력하면<br>'나소선 에디터'가 취향에 딱! 맞는 선물을 추천해드릴게요</p>
             <div class="go_for_you_container">
+                {% if user.is_authenticated %}
+                <a class=go_for_you href="{% url 'for_you' %}">선물 추천 받기</a>
+                {% else %}
                 <a class=go_for_you href="{% url 'suggestion' %}">선물 추천 받기</a>
+                {% endif %}
             </div>
         </div>
     </div>
