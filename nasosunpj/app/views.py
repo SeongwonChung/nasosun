@@ -10,7 +10,7 @@ def for_you(request):
          new_offer = Offer.objects.create(
              user_no = request.user.pk
          )
-         new_reslut = Result.objects.create(
+         new_result = Result.objects.create(
              offer_no = new_offer.pk
          )
          new_requirement = Requirement.objects.create(
