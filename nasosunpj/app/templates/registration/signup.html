@@ -2,7 +2,10 @@
 {% block title %} 회원가입 {% endblock %}
 {% block content %}
 {% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
     <link rel="stylesheet" type="text/css" href="{% static 'signup.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <div class="signup">
         <div class="category">
@@ -16,8 +19,9 @@
                 {% csrf_token %}
                 <input type="text" name="username" placeholder="아이디" class="signup-content">
                 <input type="password" name="password" placeholder="비밀번호" class="signup-content">
+                <a href="{% provider_login_url 'kakao'%}"><div class="kakao"><p><i class="fa fa-comment fa-lg" style="margin-right: 7px;"></i>카카오 계정으로 로그인</p></div></a>
                 <button type="submit">회원가입</button>
-            </form>
+            </form> 
         </div>
     </div> 
 
