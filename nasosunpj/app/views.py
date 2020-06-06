@@ -82,18 +82,21 @@ def logout(request):
     return redirect('main')
 
 # Create your views here.
-def spinner(request, offer_no):
-    requirement = Requirement.objects.get(offer_no = offer_no)
-    result = Result.objects.get(offer_no = offer_no)
+
 
 def result(request, result_pk):
     result = Result.objects.get(offer_no = result_pk)
     requirement = Requirement.objects.get(offer_no = result_pk)
 
+    #이미 크롤링 완료된 경우, 새로고침해도 새로 크롤링하지 않음.
+    known_products = Product.objects.filter(result_no = result)
+    if len(known_products) >= 3:
+        return render(request, 'result.html', {'requirement' : requirement, 'products': known_products,})
+
     age = requirement.age
     gender = requirement.gender
     budget = requirement.budget
-   
+
     cnt = 0
     while cnt < 3:
         product = GetProductInfo(age, gender, budget)
@@ -108,7 +111,7 @@ def result(request, result_pk):
             )
             cnt+=1
         
-    products = list(result.products.all().values())[0:3]
+    products = result.products.all()
 
     return render(request, 'result.html', {'requirement' : requirement, 'products': products,})
 
