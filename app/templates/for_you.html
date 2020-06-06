@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %} Nasosun {% endblock %}
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/for_you.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "loader">
+        <div  id = "loaderImg" class="lds-heart"><div></div></div>
+        <p class="loaderMessage">전문 퍼스널 쇼퍼가 취향에 딱 맞는 선물을 추천하고 있습니다!</p>
+    </div>
+    <div id="for_you_container" class="for_you_container">
+    <div class="for_you_title">선물 받으실 분의 정보를<br>입력해주세요.</div>
+    <div class="for_you_sub_title">자기자신을 위한 선물도 좋아요:)</div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="box">
+            <div class="box_title">성별</div>
+        <br>
+            <div class="box_radio_gender"> 
+                <input id="radio_man" type="radio" name="gender" value="남자">
+                <label for="radio_man">남자</label>
+                <input id="radio_woman"type="radio" name="gender" value="여자">  
+                <label for="radio_woman">여자</label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_title">연령</div>
+        <br>
+            <div class="box_radio_age"> 
+                <input id="radio_10" type="radio" name="age" value="10">
+                <label for="radio_10">10대 이하</label>
+                <input id="radio_20"type="radio" name="age" value="20">  
+                <label for="radio_20">20대</label>
+                <input id="radio_30" type="radio" name="age" value="30">
+                <label for="radio_30">30대</label>
+                <input id="radio_40"type="radio" name="age" value="40">  
+                <label for="radio_40">40대</label>
+                <input id="radio_50"type="radio" name="age" value="50">  
+                <label for="radio_50">50대 이상</label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_title">성향</div>
+        <br>
+            <div class="box_checkbox"> 
+                <input id="checkbox_in" type="checkbox" name="taste" value="내향형">
+                <label for="checkbox_in">내향형</label>
+                <input id="checkbox_out"type="checkbox" name="taste" value="외향형">  
+                <label for="checkbox_out">외향형</label>
+                <input id="checkbox_home" type="checkbox" name="taste" value="집순이형"> 
+                <label for="checkbox_home">집순이형</label>
+                <input id="checkbox_sport"type="checkbox" name="taste" value="스포츠형">  
+                <label for="checkbox_sport">스포츠형</label>
+                <input id="checkbox_art"type="checkbox" name="taste" value="예술형">  
+                <label for="checkbox_art">예술형</label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_title">취향</div>
+        <br>
+            <div class="box_slider"> 
+                <label class="box_slider_text">실용<br>주의</label>
+                    <input class="slider" type="range" min="1" max="100"  name="temperament">
+                <label class="box_slider_text">감성<br>주의</label>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_title">목적</div>
+        <br>
+            <div class="box_radio_purpose"> 
+                <input id="radio_birth" type="radio" name="purpose" value="birth">
+                <label for="radio_birth">생일선물</label>
+                <input id="radio_anni"type="radio" name="purpose" value="anni">  
+                <label for="radio_anni">기념일선물</label>
+                <input id="radio_cele" type="radio" name="purpose" value="cele">
+                <label for="radio_cele">축하선물</label>
+                <input id="radio_daily"type="radio" name="purpose" value="daily">  
+                <label for="radio_daily">일상선물</label>
+                <input id="radio_etc"type="radio" name="purpose" value="etc">  
+                <label for="radio_etc">기타</label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_title">예산</div>
+        <br>
+            <input class="box_budget" type="number" name="budget" placeholder="계획하신 예산을 입력해주세요">         
+        </div>
+        <div class="for_you_submit_container">
+        <button id = "for_you_submit" class="for_you_submit" type="submit">선물 추천 받기</button>   
+        </div>          
+    </form>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("loader").style.display = "none";
+
+        window.onload = function() {
+            document.getElementById("for_you_submit").onclick = function() {
+                document.getElementById("for_you_container").style.display = "none";                
+                document.getElementById("loader").style.display = "flex";
+
+            };
+        };
+      
+    </script>
+    {% endblock content %}
+</body>
+

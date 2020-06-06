@@ -1,0 +1,35 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+body{
+    margin: 0;
+}
+.header{
+    height: 66px;
+    width: 100%;
+    background-color: #FFBA32;
+    border-radius: 0,0,20,20;
+    Box-sizing: border-box;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 0 0 20px 20px;
+}
+.header_line{
+    position: fixed;
+    top: 57.8px;
+    left : 10px;
+    z-index: 1;
+    width: 93%;
+    margin: 0 auto;
+    border-bottom: #FFB532 solid 2px;
+}
+.logo_img{
+    position: fixed;
+    top: 11px; left: 36px;
+    width: 56px;
+    height: 39px;
+    
+}
+

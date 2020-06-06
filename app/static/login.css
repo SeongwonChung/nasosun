@@ -1,0 +1,74 @@
+
+*{ margin: 0 auto;
+    Box-sizing: border-box;
+}
+
+h2{
+    color: #ffa900;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+}
+.login{
+    margin-top: 111px;
+    margin-left: 53px;
+    margin-right: 52px;
+}
+.category{
+    margin-top: 50px;
+    margin-bottom: 49px;
+}
+.login-content{
+    padding:  1px 25px;
+    font-weight: bolder;
+    margin-bottom: 23.5px;
+    width: 270px;
+    height: 30px;
+    opacity: 0.3;
+    border-radius: 10px;
+    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #FFBA32;
+    color:#ffffff;
+    border: 0;
+    outline: 0;
+    letter-spacing: 3px; 
+}
+button{
+    margin-top: 71.5px;
+    font-size: 16px;
+    width: 154px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffa900;
+    color:#ffffff;
+    border: 0;
+    outline: 0;
+}
+.kakao{
+    margin-top: 52px;
+    font-size: 10px;
+    font-weight: bold;
+    width: 231px;
+    height: 41px;
+    background-color: rgb(255, 235, 30);
+    color:rgb(80, 52, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+input::placeholder{
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 2.08;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
