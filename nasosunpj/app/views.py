@@ -84,19 +84,23 @@ def result(request, result_pk):
     gender = requirement.gender
     budget = requirement.budget
    
-    for i in range(3):
+    cnt = 0
+    while cnt < 3:
         product = GetProductInfo(age, gender, budget)
-        new_product = Product.objects.create(
-            name = product['name'],
-            img_url = product['img_url'],
-            price = product['price'],
-            product_url = product['product_url'],
-            result_no = result
-        )
-   
-    products = result.products.all()
+        found_product = Product.objects.filter(result_no = result, name=product['name'])
+        if len(found_product) == 0:
+            new_product = Product.objects.create(
+                name = product['name'],
+                img_url = product['img_url'],
+                price = product['price'],
+                product_url = product['product_url'],
+                result_no = result
+            )
+            cnt+=1
+        
+    products = list(result.products.all().values())[0:3]
 
-    return render(request, 'result.html', {'requirement' : requirement, 'products': products})
+    return render(request, 'result.html', {'requirement' : requirement, 'products': products,})
 
 
 def main(request):
