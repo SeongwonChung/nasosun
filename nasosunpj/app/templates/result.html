@@ -40,8 +40,35 @@
 </div>
 <div class="reviewBox">
     <p class = "reviewBox__message">추천 결과는 마음에 드셨나요?</p>
-    <p class = "star">★★★★★</p>
-    <a class = "reviewBox__again" href="{% url 'for_you' %}">한번 더 추천받기</a>
+    <div class="star_again">
+        <div class="star-box">
+            <span class="star star_left"></span>
+            <span class="star star_right"></span>
+        
+            <span class="star star_left"></span>
+            <span class="star star_right"></span>
+        
+            <span class="star star_left"></span>
+            <span class="star star_right"></span>
+        
+            <span class="star star_left"></span>
+            <span class="star star_right"></span>
+        
+            <span class="star star_left"></span>
+            <span class="star star_right"></span>
+        </div>  
+        <script>
+                $(".star").on('click',function(){
+                var idx = $(this).index();
+        $(".star").removeClass("on");
+        for(var i=0; i<=idx; i++){
+            $(".star").eq(i).addClass("on");
+        }
+        });
+        </script>
+        
+        <a class = "reviewBox__again" href="{% url 'main' %}"><div class="again"><p>홈으로 가기</p></div></a>
+    </div> 
 </div>
 
 {% endblock content %}
