@@ -11,6 +11,7 @@ h2{
     letter-spacing: 0.48px;
 }
 .login{
+    margin-top: 111px;
     margin-left: 53px;
     margin-right: 52px;
 }
@@ -19,6 +20,8 @@ h2{
     margin-bottom: 49px;
 }
 .login-content{
+    padding:  1px 25px;
+    font-weight: bolder;
     margin-bottom: 23.5px;
     width: 270px;
     height: 30px;
@@ -29,6 +32,7 @@ h2{
     color:#ffffff;
     border: 0;
     outline: 0;
+    letter-spacing: 3px; 
 }
 button{
     margin-top: 71.5px;
@@ -58,7 +62,6 @@ a{
     text-decoration: none;
 }
 input::placeholder{
-    font-family: NotoSansKR;
     font-size: 12px;
     color: #ffffff;
     line-height: 2.08;
