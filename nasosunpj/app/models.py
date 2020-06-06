@@ -16,7 +16,7 @@ class Offer(models.Model):
 
 
 class Result(models.Model):
-    offer_no = models.ForeignKey(Offer, on_delete = models.CASCADE, related_name = "results")
+    offer_no = models.OneToOneField(Offer, on_delete = models.CASCADE, primary_key = True)
     products = models.ManyToManyField(Product)
 
     def __str__(self):
@@ -49,10 +49,8 @@ class Requirement(models.Model):
             return str(self.pk) + "/"+ str(self.offer_no)
 
 class Review(models.Model):
-    result_no = models.OneToOneField(Result, on_delete = models.CASCADE, primary_key = True)
-    user_no = models.ForeignKey(User, on_delete = models.CASCADE, related_name = "reviews")
-    product_no = models.ForeignKey(Product, on_delete = models.CASCADE, related_name = "products")
+    offer_no = models.OneToOneField(Offer, on_delete = models.CASCADE, primary_key = True)
     satisfy = models.IntegerField()
 
     def __str__(self):
-        return self.result_no
+        return self.offer_no
