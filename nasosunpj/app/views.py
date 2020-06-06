@@ -27,8 +27,8 @@ def for_you(request):
 
 def signup(request):
     if request.method == 'POST':
-        found_user=User.objects.filter(username=request.POST['username'])
-        if found_user is not None :
+        found_user = User.objects.filter(username = request.POST['username'])
+        if len(found_user) >0 :
             error='이미 있는 아이디입니다'
             return render(request, 'registration/signup.html',{'error':error})
 
@@ -36,7 +36,9 @@ def signup(request):
             username=request.POST['username'],
             password=request.POST['password']
         )
-        auth.login(request, new_user)
+        auth.login(request, 
+                    new_user,
+                    backend='django.contrib.auth.backends.ModelBackend')
         return redirect('main')
 
     return render(request, 'registration/signup.html')
@@ -95,3 +97,6 @@ def result(request, result_pk):
 
 def main(request):
     return render(request, 'main.html')
+
+def membership_suggestion(request):
+    return redirect('registration/signup')
