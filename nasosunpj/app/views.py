@@ -34,7 +34,7 @@ def for_you(request):
             purpose =request.POST['purpose'],
             budget =request.POST['budget'],
         )
-        return  redirect('spinner', new_result.pk)
+        return  redirect('result', new_result.pk)
     return render(request, 'for_you.html')
 
 def signup(request):
@@ -85,12 +85,14 @@ def spinner(request, offer_no):
     requirement = Requirement.objects.get(offer_no = offer_no)
     result = Result.objects.get(offer_no = offer_no)
 
+def result(request, result_pk):
+    result = Result.objects.get(offer_no = result_pk)
+    requirement = Requirement.objects.get(offer_no = result_pk)
+
     age = requirement.age
     gender = requirement.gender
     budget = requirement.budget
-
-    result_pk = result.pk
-    
+   
     for i in range(3):
         product = GetProductInfo(age, gender, budget)
         new_product = Product.objects.create(
@@ -100,12 +102,7 @@ def spinner(request, offer_no):
             product_url = product['product_url'],
             result_no = result
         )
-    
-    return redirect('result', result_pk)
-
-def result(request, result_pk):
-    result = Result.objects.get(offer_no = result_pk)
-    requirement = Requirement.objects.get(offer_no = result_pk)
+   
     products = result.products.all()
 
     return render(request, 'result.html', {'requirement' : requirement, 'products': products})

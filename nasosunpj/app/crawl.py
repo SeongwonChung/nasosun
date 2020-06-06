@@ -39,8 +39,8 @@ def GetProductInfo(age, gender, budget):
     detail_soup = BeautifulSoup(detail_html.text, "html.parser")
     #get name
     product_name = detail_soup.find("div", {"class" : "summary_inner"}).find("div", {"class": "naver-splugin"})['data-title'].strip()
-    if len(product_name) > 11:
-        product_name = product_name[:10] + "..."
+    if len(product_name) > 10:
+        product_name = product_name[:9] + ".."
     #get image
     product_img = detail_soup.find("div", {"class" : "photo_area"}).find("img", {"id" : "viewImage"})['src']
 
