@@ -1,12 +1,7 @@
 *{
-    font-family: 'Noto Sans KR', sans-serif;
-    
+    font-family: 'Noto Sans KR', sans-serif; 
 }
 
-body {
-    margin:0;
- 
-}
 .header{
     height: 66px;
     width: 100%;
